@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+    
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"  color="success"></ion-back-button>
+    </ion-buttons>
+
+    
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarSesion()" fill="outline" color="success">
+        <ion-icon slot="start" name="log-out-outline"></ion-icon>
+        Cerrar Sesión
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-avatar id="profile-avatar">
+        <img src="https://i.imgur.com/X0vlR8m.png" alt="Imagen de Perfil" />
+      </ion-avatar>
+      <ion-card-title color="success">Mi perfil</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label color="success"><strong>Nombre:</strong></ion-label>
+          <ion-note slot="end">{{ perfilEstudiante?.nombre }}</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label color="success"><strong>Comuna:</strong></ion-label>
+          <ion-note slot="end">{{ perfilEstudiante?.comuna }}</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label color="success"><strong>Dirección:</strong></ion-label>
+          <ion-note slot="end">{{ perfilEstudiante?.direccion }}</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label color="success"><strong>Fecha de Nacimiento:</strong></ion-label>
+          <ion-note slot="end">{{ perfilEstudiante?.fechaNacimiento }}</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label color="success"><strong>Carrera:</strong></ion-label>
+          <ion-note slot="end">{{ perfilEstudiante?.carrera }}</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label color="success"><strong>Fecha de Ingreso:</strong></ion-label>
+          <ion-note slot="end">{{ perfilEstudiante?.fechaIngreso }}</ion-note>
+        </ion-item>
+      </ion-list>
+      <ion-button (click)="navegarHistorico()" expand="block" fill="outline" color="success" class="historial-button">
+        <ion-icon slot="start" name="book-outline"></ion-icon>
+        Historial de Asistencias 
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <div class="border-success">
+        <ion-card-title color="success">Registra tu asistencia escaneando tu código QR</ion-card-title>
+      </div>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-grid>
+        <ion-row class="ion-justify-content-center ion-margin">
+          <ion-col size="auto">
+            <ion-button (click)="cargarAnimaciones()" id="circular-button" fill="outline" color="success">Escanea aquí!</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

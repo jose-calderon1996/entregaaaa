@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      
+      <ion-back-button color="success" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="success" class="ion-text-center">Restablecer Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-input type="password" placeholder="Contraseña actual" [(ngModel)]="enteredCurrentPassword" name="enteredCurrentPassword">
+        <ion-input-password-toggle color="success" slot="end"></ion-input-password-toggle>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="password" placeholder="Nueva contraseña" [(ngModel)]="newPassword" name="newPassword">
+        <ion-input-password-toggle color="success" slot="end"></ion-input-password-toggle>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="password" placeholder="Confirmar contraseña" [(ngModel)]="confirmPassword" name="confirmPassword">
+        <ion-input-password-toggle color="success" slot="end"></ion-input-password-toggle>
+      </ion-input>
+    </ion-item>
+
+    <ion-button color="success" expand="block" fill="outline" type="submit">Restablecer Contraseña</ion-button>
+  </form>
+</ion-content>

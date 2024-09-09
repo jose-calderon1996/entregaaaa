@@ -1,0 +1,51 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title [color]="color" class="ion-text-center">Login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <ion-item>
+      <ion-label [color]="color" position="floating" >Correo</ion-label>
+      <ion-input type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label [color]="color" position="floating" >Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password">
+        <ion-input-password-toggle [color]="color" slot="end"></ion-input-password-toggle>
+      </ion-input>
+    </ion-item>
+    <ion-button fill="outline" (click)="validadInnicio()" [color]="color" expand="block">Iniciar sesión</ion-button>
+    <ion-button  [color]="color" (click)="vistaPass()"fill="clear">¿Cambiar contraseña?</ion-button>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button [color]="color"></ion-menu-button>
+      </ion-buttons>
+      <ion-title [color]="color" class="ion-text-center">Presente!</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding center-content">
+    <ion-card>
+      
+      <p class="ion-text-center" >
+        Bienvenido a <strong>Presente</strong>, la app de registro de asistencia para estudiantes. Con <strong>Presente</strong>, podrás registrar tu asistencia de manera rápida y fácil escaneando tu código QR en cada clase. ¡Simplifica tu día y asegura un control de asistencia eficiente con nuestra aplicación!
+      </p>
+      <h3 class="ion-text-center" >¿Aún no tienes cuenta de estudiante?</h3>
+    </ion-card>
+
+    
+    <ion-item lines="full">
+      <ion-label [color]="color" class="ion-text-center">Cambiar color</ion-label>
+      <ion-toggle [color]="color" (ionChange)="toggleColor()"></ion-toggle>
+    </ion-item>
+
+    <ion-button (click)="navegarRegistro()"  fill="outline" [color]="color" expand="block" class="ion-text-center">Regístrate aquí</ion-button>
+  </ion-content>
+</div>

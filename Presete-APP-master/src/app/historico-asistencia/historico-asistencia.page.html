@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home" color="success"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title color="success">Historial de Asistencias</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        
+        <ion-item *ngFor="let fecha of fechasConsecutivas">
+          
+          <ion-label color="success">{{ fecha }}</ion-label>
+        </ion-item>
+      </ion-list>
+      <ion-button (click)="navegarHome()" color="success" expand="block">
+        <ion-icon slot="start" name="home"></ion-icon>
+        Ir al home
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
