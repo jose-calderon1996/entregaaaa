@@ -12,7 +12,7 @@ import { AlertController, LoadingController } from '@ionic/angular';
 })
 export class RegistroEstudiantilPage {
   
-
+  password1: string ="";
   usuario: usuario = {
     nombre: '',
     correo: '',
